@@ -1,0 +1,1 @@
+Split gzipped fastq files by user defined number of reads. This is very fast and relies on kseq.h
