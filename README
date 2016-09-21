@@ -1,1 +1,7 @@
 Split gzipped fastq files by user defined number of reads. This is very fast and relies on kseq.h
+To compile: gcc -o fastq_splitter fastq_splitter.c -lz
+
+Usage: fastq_splitter [options] <in.fq.gz>
+Options -p STR Output prefix
+        -n INT Number of reads per file
+
