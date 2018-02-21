@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 		if (i % numreads == 1) {
 			c += 1;
 			if (is_valid_fd((int) out)) gzclose(out);
-			fname = malloc(strlen(prefix)+12);
+			fname = (char*) malloc(strlen(prefix) + 18);
 			sprintf(fname,"%s-S%06d.fq.gz",prefix,c); //Set output filename based on the prefix 
 			printf("Writing to %s\n",fname);
 			out = gzopen(fname,"w");
